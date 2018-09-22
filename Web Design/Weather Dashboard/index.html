@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Latitude vs X</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <title>Latitude vs Weather</title>
+  <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <nav class="navbar navbar-default">
-    <div class="container-fluid">
       
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -21,30 +21,41 @@
         <div class="col-md-1"></div>
         <div class="col-md-1"></div>
         <div class="col-md-1"></div>
-        <a class="navbar-brand" href="index.html" style="color: blue; background-color: gray;"
+        <a class="navbar-brand" href="index.html" style="color: #4aaaa5; background-color: lightgray;">
             <span class="nav-color">Latitude</span>
         </a>
       </div>
 
-      
+  
+  </div>
+
+  
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
+        
+            
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-            <li><a href="max_temperature.html">Max Temperature</a></li>
-            <li><a href="humidity.html">Humidity</a></li>
-            <li><a href="cloudiness.html">Cloudiness</a></li>
-            <li><a href="wind_speed.html">Wind Speed</a></li>
-            </ul>
+            <a id="dLabel" data-target="#" href="index.html" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+              
+            <div class="dropdown">
+              
+                <div class="dropdown-content">
+                  <a href="max_temperature.html">Max Temperature</a>
+                  <a href="humidity.html">Humidity</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="cloudiness.html">Cloudiness</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="wind_speed.html">Wind Speed</a>
+                </div>
+            </div>
           </li>
-          <li><a href="comparisons.html">Comparisons</a></li>
+          <li><a href="comparison.html">Comparison</a></li>
           <li><a href="data.html">Data</a></li>
         </ul>
       </div>
-      <!-- /.navbar-collapse -->
+     
     </div>
-    <!-- /.container-fluid -->
+    
   </nav>
   <div class="container">
     <div class="row">
@@ -53,32 +64,35 @@
           <article class='description-content'>
             <h1 class="description-header"> Latitude vs. Weather</h1>
             <hr class='description-hr'/>
-            <img src="/Users/jasongarner/Desktop/Personal_GitHub/Personal-GitHub/Web Design/Sample City Latitude and Longitude.png" alt="" id='description-image'/>
+            <img src="Visualizations/Sample City Latitude and Longitude.png" alt="" id='description-image'/>
             <p>The purpose of this project was to analyze the changes that happen to the weather as you get closer to the equator.  Weather information was obtained from OpenWeatherMap API and a dataset was compiled with over 600 cities.
               <br>
               <br>
             Upon constructing the dataset, Matplotlib was used to utilized to plot different charcteristics of the weather and the relationhip to latitude.  Characteristics observed included: temperature, humidity, cloudiness, and windspeed.  This site provides visualizations to represent the analysis found and display the potential relationships between the weather and the proximity to the equator.</p>
           </article>
-        </div>  
+      </div>  
 
-        <div class='col-md-2'>
+        <div class='col-md-4'>
 
             <section id='imageNav-area'>
               <div class="imageNav-content">
                 <h2 class="imageNav-header">Visualizations</h2>
                 <hr />
                 <div id="images">
-                    <a href="max_temperature.html"><img src="/Users/jasongarner/Desktop/Personal_GitHub/Personal-GitHub/Web Design/City Latitude vs Max Temp.png"  alt="Latitude vs. Max Temperature" class="imageNav-photo"></a>
-                    <a href="humidity.html"><img src="/Users/jasongarner/Desktop/Personal_GitHub/Personal-GitHub/Web Design/City Latitude vs Humidity.png" alt="Latitude vs. Humidity" class="imageNav-photo"></a>
-                    <a href="cloudiness.html"><img src="/Users/jasongarner/Desktop/Personal_GitHub/Personal-GitHub/Web Design/City Latitude vs Cloudiness.png" alt="Latitude vs. Cloudiness" class="imageNav-photo"></a>
-                    <a href="wind_speed.html"><img src="/Users/jasongarner/Desktop/Personal_GitHub/Personal-GitHub/Web Design/City Latitude vs Wind Speed.png"  alt="Latitude vs. Wind Speed" class="imageNav-photo"></a>
-                    
+                    <a href="max_temperature.html"><img src="Visualizations/City Latitude vs Max Temp.png"  alt="Latitude vs. Max Temperature" class="imageNav-photo"></a>
+                    <a href="humidity.html"><img src="Visualizations/City Latitude vs Humidity.png" alt="Latitude vs. Humidity" class="imageNav-photo"></a>
+                    <a href="cloudiness.html"><img src="Visualizations/City Latitude vs Cloudiness.png" alt="Latitude vs. Cloudiness" class="imageNav-photo"></a>
+                    <a href="wind_speed.html"><img src="Visualizations/City Latitude vs Wind Speed.png"  alt="Latitude vs. Wind Speed" class="imageNav-photo"></a>
+                </div>
+              </div>
 
             </section>
         </div>
 
   
     </div>
-</body>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+</body> 
 
-</html> --> -->
+</html>
