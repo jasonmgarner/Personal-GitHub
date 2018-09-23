@@ -25,7 +25,7 @@
                     </div>
                     <div class="col-md-12">
                         <h2>Featured Mars Image</h2>
-                        <img class="img-fluid" src="{{ mars_dict.featured_image_url }}">
+                        <img src= "{{ mars_dict.featured_img_src }}">
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@
         {% for hemi in mars_dict.hemisphere_image_urls %}
         <div class="col-md-6">
             <figure class="figure">
-                <img class="figure-img img-fluid my-1" src="{{ hemi.img_url }}">
+                <img class="figure-img img-fluid my-1" src="{{ mars_hemis }}">
                 <figcaption class="figure-caption"><h4>{{ hemi.title }}</h4></figcaption>
             </figure>
         </div>
