@@ -19,9 +19,9 @@ def scrape():
     browser.visit(url)
     html = browser.html
     soup = bs(html, 'html.parser')
-    time.sleep(3)
+    time.sleep(8)
     news_title = soup.find('div', 'content_title', 'a').text
-    time.sleep(3)
+    time.sleep(5)
     news_p = soup.find('div', 'article_teaser_body').text
     mars_dict["news_title"] = news_title
     mars_dict["news_p"] = news_p              
@@ -58,14 +58,20 @@ def scrape():
     browser.visit(facts_url)
     facts_html = browser.html
     facts_soup = bs(facts_html, "html.parser")
-
-
+    facts_table = pd.read_html(facts_url)
+    df = facts_table[0]
+    df.columns = ["Parameter", "Values"]
+    table = df.set_index(["Parameter"])
+    table_html = table.to_html()
+    table_html = table_html.replace("\n", "")
+    mars_dict["table_facts"] = table_html
                   
     #Hemisphere images                  
     hemi_url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
     browser.visit(hemi_url)
     hemi_html = browser.html
     hemi_soup = bs(hemi_html, "html.parser")
+    
 
 
     cerberus = browser.find_by_tag('h3')[0].text
